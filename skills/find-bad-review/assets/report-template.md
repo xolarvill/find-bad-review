@@ -18,27 +18,43 @@
 | TikTok |  |  |  |
 | DTC / retailer sites |  |  |  |
 
-## Top Complaint Themes
+## Category-Level Readout
 
-### 1. Theme
+- High-complaint subtype:
+- High-risk use case:
+- Design-pattern takeaway:
+
+## Commercial Judgments
+
+- Judgment:
+  Basis:
+  Why it matters:
+
+- Judgment:
+  Basis:
+  Why it matters:
+
+## Key Problems
+
+### 1. Problem statement
 
 - Why it matters:
 - Confidence:
-- Spread:
+- Where it shows up:
 
-Representative evidence:
+Example pages:
 
-- 
+- [Page title](url) - short note
 
-### 2. Theme
+### 2. Problem statement
 
 - Why it matters:
 - Confidence:
-- Spread:
+- Where it shows up:
 
-Representative evidence:
+Example pages:
 
-- 
+- [Page title](url) - short note
 
 ## Cross-Channel Patterns
 

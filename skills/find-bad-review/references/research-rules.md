@@ -47,6 +47,52 @@ Avoid clusters like:
 - "negative reviews"
 - "does not work"
 
+## Higher-Order Synthesis
+
+After clustering individual complaints, ask whether the evidence supports one level up of summarization:
+
+- Is there a subtype with disproportionate complaints?
+- Is there a design pattern that repeatedly fails?
+- Is there a usage context where complaints concentrate?
+
+Good higher-order conclusions are specific and evidence-backed:
+
+- `Retractable leashes are a distinct high-complaint subtype in this category.`
+- `Clip reliability is a more important complaint driver than comfort or appearance.`
+
+Weak higher-order conclusions are vague:
+
+- `Customers are unhappy.`
+- `People have mixed feelings.`
+
+Only make a higher-order claim when it helps the user understand the complaint landscape better than a flat list of issues.
+
+## Commercial Judgment Layer
+
+After the higher-order synthesis, ask one more question:
+
+- `What should an operator conclude from this?`
+
+Good commercial judgments are:
+
+- specific
+- grounded in the collected evidence
+- useful for merchandising, positioning, prioritization, or product decisions
+
+Examples:
+
+- `Retractable leashes look like a structurally complaint-heavy subcategory, so a generic low-trust SKU in this segment is likely to struggle on reviews.`
+- `The main problem is not styling or comfort; it is failure under use, which means reliability claims and proof matter more than aesthetic positioning.`
+- `Standard leashes may offer a cleaner conversion story than retractables because their complaint pattern is narrower and less severe.`
+
+Bad commercial judgments are:
+
+- `The business should do better.`
+- `This is a dangerous market.`
+- `Users dislike the product category.`
+
+Do not confuse "commercial judgment" with unsupported strategy theater. A judgment is only valid if it can be defended with the sources in the report.
+
 ## Severity Versus Frequency
 
 Keep these separate:

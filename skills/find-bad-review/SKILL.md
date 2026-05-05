@@ -9,6 +9,8 @@ description: Collect and summarize representative public negative reviews for a 
 
 Use this skill to research what customers dislike about a product and to turn scattered negative feedback into a structured complaint report. Prioritize evidence-backed public sources, representative complaint themes, and honest confidence notes over broad sentiment summaries.
 
+The goal is not just to list complaints. The goal is to turn complaints into higher-value commercial understanding: what kind of product or subtype is structurally weak, what objections are likely to suppress conversion or repeat purchase, and what a rational operator should conclude from the evidence.
+
 ## Workflow
 
 1. Confirm the product target.
@@ -16,7 +18,8 @@ Use this skill to research what customers dislike about a product and to turn sc
 3. Collect negative evidence from public pages.
 4. Normalize, de-duplicate, and cluster complaints.
 5. Select representative examples.
-6. Write the final report with confidence and gaps.
+6. Translate findings into commercial judgments.
+7. Write the final report with confidence and gaps.
 
 Do not claim exhaustive coverage unless the user explicitly asks for it and you actually achieved it. The default goal is a useful research report, not a full crawl.
 
@@ -101,6 +104,18 @@ Weak complaint themes:
 
 De-duplicate repeats across channels and avoid counting near-identical syndicated reviews as independent evidence.
 
+When the target is a broad product category or spans multiple listings, also look for one level up of synthesis:
+
+- high-complaint subtypes
+- high-risk use cases
+- failure-prone design patterns
+
+Example: for `dog leash`, do not stop at listing isolated issues. Notice when `retractable leashes` emerge as a distinct high-complaint subtype with repeated mechanism and safety complaints.
+
+Then go one step further: ask what business conclusion follows. Example:
+
+- `Retractable leashes are not just risky; they appear to be a structurally complaint-heavy subcategory, which makes them a weaker hero-SKU candidate unless differentiated on reliability and control.`
+
 For clustering and confidence rules, load [references/research-rules.md](references/research-rules.md).
 
 ## Step 5: Select Representative Examples
@@ -120,8 +135,10 @@ Use the report format in [references/report-format.md](references/report-format.
 
 - product target and matching notes
 - channel coverage
+- category-level readout when applicable
+- commercial judgments grounded in evidence
 - top complaint themes
-- representative examples with source links
+- example pages directly under each issue
 - confidence and evidence notes
 - gaps, caveats, and likely blind spots
 
@@ -137,13 +154,31 @@ Default report sections:
 
 1. Product target
 2. Coverage summary
-3. Top complaint themes
-4. Representative evidence
-5. Cross-channel patterns
-6. Confidence and gaps
-7. Suggested next research step
+3. Category-level readout
+4. Commercial judgments
+5. Key problems
+6. Cross-channel patterns
+7. Confidence and gaps
+8. Suggested next research step
 
 Keep claims proportional to evidence. If only Reddit and one retailer page were available, say so plainly.
+
+Commercial judgments are required when the evidence supports them. They should answer questions such as:
+
+- Is this a weak subcategory or merely a weak listing?
+- Is the complaint pattern likely to hurt conversion, retention, or review velocity?
+- Does the evidence suggest a positioning problem, a product-design problem, or a merchandising problem?
+- What would a sensible operator avoid, change, or investigate next?
+
+Do not present vague strategy fluff. Every commercial judgment must be traceable to the investigated evidence.
+
+For each key problem, prefer this shape:
+
+- problem statement as the section title
+- why it matters
+- confidence
+- where it shows up
+- `Example pages:` immediately below, with direct links
 
 ## Guardrails
 
