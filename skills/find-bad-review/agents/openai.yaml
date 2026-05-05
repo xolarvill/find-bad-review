@@ -1,0 +1,7 @@
+interface:
+  display_name: "Find Bad Review"
+  short_description: "Cross-channel product complaint research"
+  default_prompt: "Use $find-bad-review to collect public negative reviews about a product and summarize representative complaint themes with evidence and confidence notes."
+
+policy:
+  allow_implicit_invocation: true
