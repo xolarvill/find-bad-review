@@ -1,13 +1,20 @@
 # internet-business-skills
 
-This repository is `internet-business-skills`, a small commercial analysis skill pack for Codex and Claude Code.
+This repository is a pack of commercial analysis skills designed for Codex and Claude Code.
 
-It started with `find-bad-review` and now hosts multiple internet-facing business research skills that share the same working style:
+## Installation
 
-- public-source evidence first
-- structured comparison or synthesis
-- explicit confidence and gaps
-- commercial judgments instead of generic research summaries
+Install to Codex:
+
+```bash
+npx skills add xolarvill/internet-business-skills -a codex -g -y
+```
+
+Install to Codex and Claude Code:
+
+```bash
+npx skills add xolarvill/internet-business-skills  -a codex -a claude-code -g -y
+```
 
 ## Skills
 
@@ -20,18 +27,6 @@ Best for:
 - voice-of-customer complaint mining
 - product weakness research
 - objection discovery before merchandising or creative work
-
-Install to Codex:
-
-```bash
-npx skills add xolarvill/internet-business-skills --skill find-bad-review -a codex -g
-```
-
-Install to Codex and Claude Code:
-
-```bash
-npx skills add xolarvill/internet-business-skills --skill find-bad-review -a codex -a claude-code -g
-```
 
 Use:
 
@@ -49,18 +44,6 @@ Best for:
 - offer and positioning comparison
 - product-page and assortment comparison
 - public market framing before launch or iteration
-
-Install to Codex:
-
-```bash
-npx skills add xolarvill/internet-business-skills --skill analyze-competitor -a codex -g
-```
-
-Install to Codex and Claude Code:
-
-```bash
-npx skills add xolarvill/internet-business-skills --skill analyze-competitor -a codex -a claude-code -g
-```
 
 Use:
 
