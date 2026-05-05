@@ -1,138 +1,119 @@
-# find-bad-review
+# internet-business-skills
 
-`find-bad-review` is a reusable skill for researching representative public bad reviews about a product across channels such as Amazon, Chewy, Walmart, Reddit, TikTok, and brand or retailer sites.
+This repository is `internet-business-skills`, a small commercial analysis skill pack for Codex and Claude Code.
 
-## Install
+It started with `find-bad-review` and now hosts multiple internet-facing business research skills that share the same working style:
 
-Install to both Codex and Claude Code from GitHub:
+- public-source evidence first
+- structured comparison or synthesis
+- explicit confidence and gaps
+- commercial judgments instead of generic research summaries
+
+## Skills
+
+### `find-bad-review`
+
+Research representative public negative reviews for a product across channels such as Amazon, Chewy, Walmart, Reddit, TikTok, and brand or retailer sites.
+
+Best for:
+
+- voice-of-customer complaint mining
+- product weakness research
+- objection discovery before merchandising or creative work
+
+Install to Codex:
 
 ```bash
-npx skills add xolarvill/find-bad-review --skill find-bad-review -a codex -a claude-code -g
+npx skills add xolarvill/internet-business-skills --skill find-bad-review -a codex -g
 ```
 
-Install only to Codex:
+Install to Codex and Claude Code:
 
 ```bash
-npx skills add xolarvill/find-bad-review --skill find-bad-review -a codex -g
+npx skills add xolarvill/internet-business-skills --skill find-bad-review -a codex -a claude-code -g
 ```
 
-Install only to Claude Code:
-
-```bash
-npx skills add xolarvill/find-bad-review --skill find-bad-review -a claude-code -g
-```
-
-If your environment prefers copies instead of symlinks:
-
-```bash
-npx skills add xolarvill/find-bad-review --skill find-bad-review -a codex -a claude-code -g --copy
-```
-
-## Use
-
-In Codex:
+Use:
 
 ```text
 $find-bad-review Analyze the public bad reviews for a dog leash across Amazon, Chewy, Walmart, Reddit, TikTok, and brand sites.
 ```
 
-In Claude Code:
+### `analyze-competitor`
 
-```text
-/find-bad-review Analyze the public bad reviews for a dog leash across Amazon, Chewy, Walmart, Reddit, TikTok, and brand sites.
+Compare a target product or brand against public competitors using structured evidence from websites, marketplaces, reviews, social proof, and visible positioning.
+
+Best for:
+
+- competitor teardown
+- offer and positioning comparison
+- product-page and assortment comparison
+- public market framing before launch or iteration
+
+Install to Codex:
+
+```bash
+npx skills add xolarvill/internet-business-skills --skill analyze-competitor -a codex -g
 ```
 
-## What the skill does
+Install to Codex and Claude Code:
 
-It guides the agent to:
-
-1. Confirm the product target
-2. Search public channels
-3. Collect negative evidence
-4. De-duplicate and cluster complaints
-5. Pick representative examples
-6. Turn the fact pattern into business judgments
-7. Write a compact report with confidence and gaps
-
-This is optimized for human-triggered, evidence-backed research. It is not a full crawler, review API, or login-based collection system.
-
-## Example
-
-```text
-$find-bad-review Analyze the public bad reviews for a dog leash across Amazon, Chewy, Walmart, Reddit, TikTok, and brand sites. Focus on representative complaint themes, not generic sentiment.
+```bash
+npx skills add xolarvill/internet-business-skills --skill analyze-competitor -a codex -a claude-code -g
 ```
 
-### Coverage in this sample run
+Use:
 
-| Channel | Result |
-| --- | --- |
-| Amazon | Weak public sample in this pass |
-| Chewy | Strong |
-| Walmart | Strong |
-| Reddit | Strong |
-| TikTok | Weak public sample in this pass |
-| Brand / retailer sites | Limited beyond Chewy and Walmart in this pass |
+```text
+$analyze-competitor Compare our dog leash offer against Ruffwear, Max and Neo, and TUG. Focus on price ladder, product claims, review proof, and likely conversion differences.
+```
 
-### Category-level readout
+## Package Shape
 
-- `Retractable leashes` emerged as a distinct high-complaint subtype inside the broader `dog leash` category.
-- The strongest negative signal was not around style or price, but around `failure under use`: retraction failure, lock failure, and loss of handler control.
+Each skill stays self-contained under `skills/`:
 
-### Commercial judgments
+```text
+skills/
+  find-bad-review/
+  analyze-competitor/
+platforms/
+examples/
+```
 
-- Retractable leashes appear to be a structurally complaint-heavy subcategory, not just a few bad listings.
-- For this category, reliability and control look more commercially important than aesthetics.
-- Standard leashes may offer a cleaner broad-market merchandising story because the complaint pattern is narrower and less severe.
+Each skill should carry its own:
 
-### Representative findings
+- `SKILL.md` as the canonical workflow
+- `agents/openai.yaml` for UI metadata
+- `references/` for method notes and report shapes
+- `scripts/` only when a repeated output is worth templating
+- `assets/` for reusable report templates
 
-#### 1. Retractable mechanism failures are a recurring complaint
+This repository is intentionally a skill pack, not a shared runtime. A small amount of duplication between skills is acceptable if it keeps each skill installable and understandable on its own.
 
-- Chewy examples describe lines twisting, shredding, or failing to retract, and lock buttons that stop working.
-- Walmart examples show similar issues: leash material breaking, retractors failing after a short period, and stop buttons breaking.
-- This is the clearest repeated bad-review pattern in the public sample.
+## Skill Design Principles
 
-Confidence: `high`
+- Keep skills narrow and triggerable.
+- Prefer one commercial research job per skill.
+- Reuse tone and report discipline across skills, not a giant all-in-one prompt.
+- Keep claims proportional to publicly visible evidence.
+- Distinguish evidence collection from business judgment.
 
-Example pages:
+## Current Scope
 
-- [Chewy: Frisco Retractable Dog Leash reviews](https://www.chewy.com/frisco-retractable-dog-leash/product-reviews/768902)
-- [Chewy: Hyper Pet Retractable Dog Leash reviews](https://www.chewy.com/hyper-pet-retractable-dog-leash/product-reviews/149219)
-- [Walmart: Retractable Dog Leash 16ft reviews](https://www.walmart.com/reviews/product/408047039)
+This package is optimized for human-triggered public research, not:
 
-### 2. Safety risk is a top concern, not just product annoyance
+- private API ingestion
+- login-dependent scraping
+- ongoing monitoring jobs
+- full autonomous agent orchestration
 
-- Reddit discussions repeatedly frame retractable leashes as a control and injury risk.
-- Common complaints include friction burns, difficulty pulling a dog back quickly, dropped handles scaring the dog, and failures in high-risk situations.
-- This theme matters because even less-frequent failures can have higher severity than comfort complaints.
+## Examples
 
-Confidence: `high`
+- [Representative bad review report](examples/dog-leash-report.md)
+- [Representative competitor report](examples/dog-leash-competitor-report.md)
 
-Example pages:
+## Portability
 
-- [Reddit: Are retractable leashes bad?](https://www.reddit.com/r/dogs/comments/zxtynv/are_retractable_leashes_bad/)
-- [Chewy: My Bestie Retractable Dog Leash reviews](https://www.chewy.com/my-bestie-retractable-dog-leash/product-reviews/394114)
+Use `platforms/codex.md` and `platforms/claude-code.md` as lightweight notes for packaging the same skill workflow across agent systems.
 
-### 3. Hardware durability and clip reliability also show up outside retractable mechanics
-
-- Chewy examples for non-retractable leashes mention carabiner or clip failures and repeated hardware defects.
-- This suggests that for standard leashes, the key negative theme is not retraction but attachment-point reliability.
-
-Confidence: `medium`
-
-Example pages:
-
-- [Chewy: Tuff Mutt Dual Handle Rope Dog Leash reviews](https://www.chewy.com/tuff-mutt-dual-handle-rope-dog-leash/product-reviews/213679)
-- [Chewy: The Foggy Dog Onyx Marine Rope Dog Leash reviews](https://www.chewy.com/foggy-dog-onyx-marine-rope-dog-leash/product-reviews/212616)
-
-### Abridged result
-
-For `dog leash`, the most representative public bad-review themes were:
-
-- retractable leash does not retract smoothly or stops retracting
-- lock or brake mechanism breaks
-- leash or tape shreds or breaks too early
-- hardware or clip failure can create a safety issue
-- retractable format reduces handler control in fast or crowded situations
-
-The strongest cross-channel pattern was that negative feedback was more specific and more serious around `failure under use` than around aesthetics or price.
+Note: the concrete skill names remain `find-bad-review` and `analyze-competitor`; `internet-business-skills` is the package or repository name.

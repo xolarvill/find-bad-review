@@ -1,0 +1,7 @@
+interface:
+  display_name: "Analyze Competitor"
+  short_description: "Structured public competitor research"
+  default_prompt: "Use $analyze-competitor to compare a target product or brand against public competitors and summarize the key differences, evidence, and commercial judgments."
+
+policy:
+  allow_implicit_invocation: true
