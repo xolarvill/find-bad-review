@@ -2,8 +2,6 @@
 
 `find-bad-review` is a reusable skill for researching representative public bad reviews about a product across channels such as Amazon, Chewy, Walmart, Reddit, TikTok, and brand or retailer sites.
 
-The core workflow lives in [skills/find-bad-review/SKILL.md](skills/find-bad-review/SKILL.md).
-
 ## Install
 
 Install to both Codex and Claude Code from GitHub:
@@ -58,51 +56,11 @@ It guides the agent to:
 
 This is optimized for human-triggered, evidence-backed research. It is not a full crawler, review API, or login-based collection system.
 
-## What we learned from real runs
-
-- Broad category prompts can be surprisingly valuable, but mainly as `direction-finding` runs.
-- In a broad category, the best outcome is often not "here are the top complaints," but "here is the complaint-heavy subtype you should investigate next."
-- Narrower prompts usually produce stronger, more decision-ready outputs than very broad prompts.
-
-In practice:
-
-- `dog leash` worked well because the run surfaced `retractable leashes` as a distinct complaint-heavy subtype.
-- `dog collar` worked best as a category-mapping run: it separated `standard collars`, `bark/training collars`, and `smart/GPS collars`, then showed that the functional subtypes carry very different complaint structures.
-
-Use the skill in two modes:
-
-1. `Category scan`
-   Use a broad term like `dog collar` when you want to discover the real battleground inside the category.
-2. `Subtype decision`
-   Follow up with a narrower term like `gps dog collar`, `bark collar`, or `standard dog collar` when you want conclusions that are closer to a merchandising or product decision.
-
-As a rule of thumb, broad-category runs are great for:
-
-- finding complaint-heavy subtypes
-- spotting structurally weak product formats
-- generating commercially useful follow-up questions
-
-Narrower runs are better for:
-
-- evaluating a specific subtype
-- comparing likely hero-SKU directions
-- making a more concrete product or positioning judgment
-
-## Tutorial example
-
-### Prompt
+## Example
 
 ```text
 $find-bad-review Analyze the public bad reviews for a dog leash across Amazon, Chewy, Walmart, Reddit, TikTok, and brand sites. Focus on representative complaint themes, not generic sentiment.
 ```
-
-### Process used in this example
-
-1. Confirmed the product target as the broad `dog leash` category, with special attention to retractable leashes because that subtype surfaced the strongest public negative evidence.
-2. Searched public retailer review pages and community discussion using complaint-oriented queries.
-3. Collected only public, attributable negative evidence.
-4. Clustered repeated complaints into concrete failure modes instead of generic labels.
-5. Marked channel gaps where public evidence was weak or hard to verify in this pass.
 
 ### Coverage in this sample run
 
@@ -178,9 +136,3 @@ For `dog leash`, the most representative public bad-review themes were:
 - retractable format reduces handler control in fast or crowded situations
 
 The strongest cross-channel pattern was that negative feedback was more specific and more serious around `failure under use` than around aesthetics or price.
-
-## Repo layout
-
-- `skills/find-bad-review/`: main skill
-- `platforms/`: portability notes for Codex and Claude Code
-- `examples/`: sample output shape
