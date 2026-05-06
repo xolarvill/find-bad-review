@@ -1,0 +1,7 @@
+interface:
+  display_name: "Verify Idea"
+  short_description: "Fact-based commercial idea validation"
+  default_prompt: "Use $verify-idea to evaluate a business idea through public internet evidence, testable claims, and a supported-versus-unclear verdict."
+
+policy:
+  allow_implicit_invocation: true

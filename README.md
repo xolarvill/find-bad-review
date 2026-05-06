@@ -68,6 +68,23 @@ Use:
 $portray-audience Analyze this dog leash brand and portray the likely audience clusters, buying motivations, objections, and which audience seems strongest or weakest.
 ```
 
+### `verify-idea`
+
+Verify a commercial idea using current public internet evidence, a claim ledger, and a disciplined verdict instead of a generic opinion.
+
+Best for:
+
+- fact-checking startup or product ideas
+- pressure-testing market-entry theses
+- checking demand, channel, and competition assumptions
+- identifying what is supported versus still unclear
+
+Use:
+
+```text
+$verify-idea Verify the idea of launching a premium retractable dog leash brand on TikTok Shop in the US. Focus on demand, channel fit, competition, and trust burden.
+```
+
 ## Package Shape
 
 Each skill stays self-contained under `skills/`:
@@ -77,6 +94,7 @@ skills/
   find-bad-review/
   analyze-competitor/
   portray-audience/
+  verify-idea/
 platforms/
 examples/
 ```
@@ -113,9 +131,10 @@ This package is optimized for human-triggered public research, not:
 - [Representative bad review report](examples/dog-leash-report.md)
 - [Representative competitor report](examples/dog-leash-competitor-report.md)
 - [Representative audience portrait report](examples/dog-leash-audience-report.md)
+- [Representative idea verification report](examples/premium-retractable-leash-idea-report.md)
 
 ## Portability
 
 Use `platforms/codex.md` and `platforms/claude-code.md` as lightweight notes for packaging the same skill workflow across agent systems.
 
-Note: the concrete skill names remain `find-bad-review`, `analyze-competitor`, and `portray-audience`; `internet-business-skills` is the package or repository name.
+Note: the concrete skill names remain `find-bad-review`, `analyze-competitor`, `portray-audience`, and `verify-idea`; `internet-business-skills` is the package or repository name.
