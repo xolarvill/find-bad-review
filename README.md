@@ -16,6 +16,20 @@ Install to Codex and Claude Code:
 npx skills add xolarvill/internet-business-skills  -a codex -a claude-code -g -y
 ```
 
+## Updating
+
+When this repository adds new skills or updates existing ones, bring your local installation up to date:
+
+```bash
+# Update all installed skills to latest versions
+npx skills update -g -y
+
+# If new skills were added to the pack, re-run add to pick them up
+npx skills add xolarvill/internet-business-skills -a codex -g -y
+```
+
+`skills update` refreshes skills you already have. Re-running `skills add` picks up new skills that weren't in the pack when you first installed.
+
 ## Skills
 
 ### `find-bad-review`
