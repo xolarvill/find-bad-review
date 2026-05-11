@@ -45,10 +45,12 @@ Treat "same product across channels" as a research problem, not a solved fact. U
 Default target channels:
 
 - Amazon
-- Chewy
 - Walmart
 - Reddit
 - TikTok
+- X (formerly Twitter)
+- key incumbents in the industry — e.g., Chewy in pet care.
+- specialty forums when relevant (e.g. dog training forums for a dog leash)
 - brand or retailer review pages
 
 When one source is weak or inaccessible, broaden through public search and visible page navigation. Keep the search focused around the product and complaint intent. Good search patterns include:

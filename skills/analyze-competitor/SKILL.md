@@ -93,6 +93,7 @@ Collect enough evidence to support confident comparison, not a full crawl. Good 
 - official brand or product pages
 - category or collection pages
 - Amazon or major marketplace listings
+- Trustpilot, G2, or other review sites
 - retailer pages
 - public review surfaces
 - Reddit threads or other community discussions

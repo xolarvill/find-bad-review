@@ -93,6 +93,7 @@ Good public evidence sources include:
 - retailer pages
 - app stores or product directories
 - Reddit and community discussions
+- Meta ad Library and similar ad transparency tools
 - public social content
 - public pricing pages
 - current news or policy pages when constraints matter
