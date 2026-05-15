@@ -67,6 +67,8 @@ For source-specific heuristics, load [references/source-adapters.md](references/
 
 ## Step 3: Collect Negative Evidence
 
+**You must read actual page content.** Navigate to and load review pages, product pages, and forum threads directly. Never rely on WebSearch snippets or search result summaries to characterize a review or complaint — snippets are truncated, decontextualized, and often misrepresent the actual content. If a page is inaccessible, mark the evidence gap rather than substituting a snippet.
+
 Collect only enough material to support a confident summary. Favor:
 
 - review pages with visible rating context

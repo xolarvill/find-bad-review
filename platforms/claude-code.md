@@ -30,3 +30,7 @@ Guardrails:
 - Preserve confidence labels, evidence notes, and explicit caveats.
 - Keep the source-adapter logic and report format aligned with the files in `skills/find-bad-review/references/`.
 - Treat `skills/find-bad-review/SKILL.md` as the canonical workflow source.
+
+## Platform-Specific Tool Guidance
+
+**Reading pages:** Use Playwright (`browser_navigate` + `browser_snapshot`) or `WebFetch` to load actual page content. Never rely on `WebSearch` snippets alone to characterize a review — search summaries are truncated and often misrepresent complaints.

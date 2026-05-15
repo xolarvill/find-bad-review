@@ -2,6 +2,8 @@
 
 Use this file when deciding how to collect evidence from different channels and how to explain source limitations.
 
+**For every channel below, you must navigate to and read the actual page.** Load the review page, product page, or thread directly. WebSearch snippets are not evidence — they are truncated and may misrepresent the complaint. If you cannot load the actual page, mark the gap rather than using a snippet as a substitute.
+
 ## Amazon
 
 - Prefer product pages with visible review sections and sort or filter controls.
