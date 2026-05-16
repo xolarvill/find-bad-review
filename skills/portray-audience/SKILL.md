@@ -44,6 +44,8 @@ If the user asks for demographic precision that public evidence cannot support, 
 
 ## Step 2: Gather Public Evidence
 
+**You must read actual page content.** Navigate to and load source pages directly. Never rely on WebSearch snippets to characterize evidence — snippets are truncated and often misrepresent content. If a page is inaccessible, mark the gap. Follow the evidence standard in [../../references/evidence-standard.md](../../references/evidence-standard.md).
+
 Collect only enough evidence to support a useful audience portrait. Good public sources include:
 
 - official brand and product pages

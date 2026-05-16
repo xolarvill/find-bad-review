@@ -84,6 +84,8 @@ The point is not to do a full market study. The point is to pressure-test the co
 
 ## Step 4: Search Current Public Evidence
 
+**You must read actual page content.** Navigate to and load source pages directly. Never rely on WebSearch snippets to characterize evidence — snippets are truncated and often misrepresent content. If a page is inaccessible, mark the gap. Follow the evidence standard in [../../references/evidence-standard.md](../../references/evidence-standard.md).
+
 This skill depends on current internet search and live public browsing. Always prefer current sources and note the dates when the freshness matters.
 
 Good public evidence sources include:

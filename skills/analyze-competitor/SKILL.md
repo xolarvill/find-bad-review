@@ -88,6 +88,8 @@ Do not compare everything just because it is visible. The point is decision usef
 
 ## Step 4: Collect Public Evidence
 
+**You must read actual page content.** Navigate to and load source pages directly. Never rely on WebSearch snippets to characterize evidence — snippets are truncated and often misrepresent content. If a page is inaccessible, mark the gap. Follow the evidence standard in [../../references/evidence-standard.md](../../references/evidence-standard.md).
+
 Collect enough evidence to support confident comparison, not a full crawl. Good public sources include:
 
 - official brand or product pages

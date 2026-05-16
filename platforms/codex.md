@@ -7,4 +7,4 @@
 
 ## Platform-Specific Tool Guidance
 
-**Reading pages:** Use Codex's page-fetching or browser tools to load actual page content. Never rely on search result snippets alone to characterize a review — search summaries are truncated and often misrepresent complaints. If Codex does not have a browser tool available, use the equivalent page-reading capability (e.g., a fetch/read-url tool) to load the full page.
+**Reading pages:** All research skills in this pack (`find-bad-review`, `verify-idea`, `analyze-competitor`, `portray-audience`) require reading actual page content. Use Codex's page-fetching or browser tools to load target pages directly. Never rely on search result snippets alone — search summaries are truncated and often misrepresent content. If Codex does not have a browser tool available, use the equivalent page-reading capability (e.g., a fetch/read-url tool) to load the full page. See `references/evidence-standard.md` for the full evidence philosophy.

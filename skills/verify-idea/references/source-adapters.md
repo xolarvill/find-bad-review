@@ -2,6 +2,8 @@
 
 Use this file when deciding how to gather current public evidence for idea verification.
 
+**For every channel below, you must navigate to and read the actual page.** Load the source page directly. WebSearch snippets are not evidence — they are truncated and may misrepresent the content. If you cannot load the actual page, mark the gap rather than using a snippet as a substitute.
+
 ## Official Company And Product Pages
 
 - Treat these as primary evidence for visible positioning, pricing, offer structure, and trust proof.

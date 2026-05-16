@@ -33,4 +33,4 @@ Guardrails:
 
 ## Platform-Specific Tool Guidance
 
-**Reading pages:** Use Playwright (`browser_navigate` + `browser_snapshot`) or `WebFetch` to load actual page content. Never rely on `WebSearch` snippets alone to characterize a review — search summaries are truncated and often misrepresent complaints.
+**Reading pages:** All research skills in this pack (`find-bad-review`, `verify-idea`, `analyze-competitor`, `portray-audience`) require reading actual page content. Use Playwright (`browser_navigate` + `browser_snapshot`) or `WebFetch` to load target pages directly. Never rely on `WebSearch` snippets alone — search summaries are truncated and often misrepresent content. See `references/evidence-standard.md` for the full evidence philosophy.
