@@ -1,6 +1,10 @@
 # internet-business-skills
 
-This repository is a pack of commercial analysis skills designed for Codex and Claude Code.
+This repository is a pack of commercial analysis skills designed for Codex and Claude Code. Every skill follows one rule: research must be narrow and fact-based.
+
+- Keep claims proportional to publicly visible evidence.
+- Distinguish evidence collection from business judgment.
+- When a request is too broad, ask one clarification at a time, then proceed.
 
 ## Installation
 
@@ -99,50 +103,14 @@ Use:
 $verify-idea Verify the idea of launching a premium retractable dog leash brand on TikTok Shop in the US. Focus on demand, channel fit, competition, and trust burden.
 ```
 
-## Package Shape
+## Best Practice
 
-Each skill stays self-contained under `skills/`:
+These skills output Markdown reports. An [Obsidian](https://obsidian.md/download) vault is recommended as a research workspace — Markdown-native and link-friendly.
 
-```text
-skills/
-  find-bad-review/
-  analyze-competitor/
-  portray-audience/
-  verify-idea/
-platforms/
-examples/
+Create a blank folder, open Claude Code inside it, then prompt:
+```plain
+/init This is a knowledge vault for Obsidian. I'm trying to research [xxx]. My goal is [xxx]. All research should be written in Markdown. Use obsidian-cli to manage notes. All research follows skills from `github.com/xolarvill/internet-business-skills`, which are already installed.
 ```
-
-Each skill should carry its own:
-
-- `SKILL.md` as the canonical workflow
-- `agents/openai.yaml` for UI metadata
-- `references/` for method notes and report shapes
-- `scripts/` only when a repeated output is worth templating
-- `assets/` for reusable report templates
-
-This repository is intentionally a skill pack, not a shared runtime. A small amount of duplication between skills is acceptable if it keeps each skill installable and understandable on its own.
-
-## Skill Design Principles
-
-- Keep skills narrow and triggerable.
-- Prefer one commercial research job per skill.
-- Reuse tone and report discipline across skills, not a giant all-in-one prompt.
-- Keep claims proportional to publicly visible evidence.
-- Distinguish evidence collection from business judgment.
-
-## Clarification Policy
-
-When a request is too broad or underspecified, these skills should clarify only the missing details that change the research path. This is not a full planning mode. Ask one practical question at a time, usually with small options plus room for extra context, then proceed once the target, market, channel, or decision context is clear enough to research honestly.
-
-## Current Scope
-
-This package is optimized for human-triggered public research, not:
-
-- private API ingestion
-- login-dependent scraping
-- ongoing monitoring jobs
-- full autonomous agent orchestration
 
 ## Examples
 
@@ -150,9 +118,3 @@ This package is optimized for human-triggered public research, not:
 - [Representative competitor report](examples/dog-leash-competitor-report.md)
 - [Representative audience portrait report](examples/dog-leash-audience-report.md)
 - [Representative idea verification report](examples/premium-retractable-leash-idea-report.md)
-
-## Portability
-
-Use `platforms/codex.md` and `platforms/claude-code.md` as lightweight notes for packaging the same skill workflow across agent systems.
-
-Note: the concrete skill names remain `find-bad-review`, `analyze-competitor`, `portray-audience`, and `verify-idea`; `internet-business-skills` is the package or repository name.
